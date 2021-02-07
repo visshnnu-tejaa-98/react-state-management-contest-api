@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Movie from './movie';
-import Nav from './navbar';
+import { MovieContext } from './movieContext';
 const MovieList = () => {
+	let value = useContext(MovieContext);
 	return (
 		<div>
-			<Nav />
+			<h1>{value}</h1>
 			{/* {movies.map((movie) => (
 				<Movie movie={movie} key={movie.id} />
 			))} */}
